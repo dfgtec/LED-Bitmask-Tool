@@ -163,7 +163,7 @@ Begin Window wAbout
       FontName        =   "System"
       FontSize        =   13.0
       FontUnit        =   0
-      Height          =   40
+      Height          =   20
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -189,7 +189,7 @@ Begin Window wAbout
       Visible         =   True
       Width           =   270
    End
-   Begin Label AboutSt4
+   Begin Label AboutSt5
       AllowAutoDeactivate=   True
       Bold            =   False
       DataField       =   ""
@@ -260,6 +260,41 @@ Begin Window wAbout
       Visible         =   True
       Width           =   100
    End
+   Begin Label AboutSt4
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   13.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   90
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   True
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   8
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Untitled"
+      TextAlignment   =   0
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   95
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   270
+   End
 End
 #tag EndWindow
 
@@ -270,16 +305,15 @@ End
 		  
 		  self.AboutSt1.Text = App.cProgName
 		  self.AboutSt2.Text = "Version: " + App.cProgVersion + " (" + App.cProgRelDate + ")"
-		  self.AboutSt3.Text = "Copyright " + chr(169) + " " + App.cProgCopyright + EndOfLine + "All rights reserved."
+		  self.AboutSt3.Text = "Copyright " + chr(169) + " " + App.cProgCopyright
+		  self.AboutSt4.Text = "All rights reserved."
 		  
 		  StaticLink1.Initialize(App.cSupportWebsite, App.cSupportWebsite)
 		  //StaticLink2.Initialize(App.cSupportEmail, "mailto:" + App.cSupportEmail) 
 		  
-		  if isdarkmode() then
+		  if isdarkmode() then  // make text lighter
 		    StaticLink1.TextColor = &c8080FF
 		    //StaticLink2.TextColor = &c8080FF
-		  else
-		    
 		  end
 		End Sub
 	#tag EndEvent
