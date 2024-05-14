@@ -14,14 +14,6 @@ Inherits DesktopApplication
 
 
 	#tag Method, Flags = &h0
-		Function Bin8(value As Int32) As String
-		  Const prefix="00000000" //A 8-bits value is 8 digits long at max
-		  
-		  Return Right( prefix + Bin( value ), 8 )  //We always return 8 characters
-		End Function
-	#tag EndMethod
-
-	#tag Method, Flags = &h0
 		Sub CloneInto(a As Object, b As Object)
 		  Dim aTi As Introspection.TypeInfo = Introspection.GetType(a)
 		  Dim bTi As Introspection.TypeInfo = Introspection.GetType(b)
@@ -38,14 +30,6 @@ Inherits DesktopApplication
 		End Sub
 	#tag EndMethod
 
-	#tag Method, Flags = &h0
-		Function Hex8(value As Int32) As String
-		  Const prefix="00" //A 8-bits value is 2 digits long at max
-		  
-		  Return Right( prefix + Hex( value ), 2 )  //We always return 2 characters
-		End Function
-	#tag EndMethod
-
 
 	#tag Property, Flags = &h0
 		cDefault As Color = &cffff00
@@ -56,16 +40,16 @@ Inherits DesktopApplication
 	#tag EndProperty
 
 
-	#tag Constant, Name = cProgCopyright, Type = String, Dynamic = False, Default = \"2022 David Gadberry", Scope = Public
+	#tag Constant, Name = cProgCopyright, Type = String, Dynamic = False, Default = \"2024 David Gadberry", Scope = Public
 	#tag EndConstant
 
 	#tag Constant, Name = cProgName, Type = String, Dynamic = False, Default = \"LED Bitmask Tool", Scope = Public
 	#tag EndConstant
 
-	#tag Constant, Name = cProgRelDate, Type = String, Dynamic = False, Default = \"29 Apr 2022", Scope = Public
+	#tag Constant, Name = cProgRelDate, Type = String, Dynamic = False, Default = \"8 May 2024", Scope = Public
 	#tag EndConstant
 
-	#tag Constant, Name = cProgVersion, Type = String, Dynamic = False, Default = \"1.11", Scope = Public
+	#tag Constant, Name = cProgVersion, Type = String, Dynamic = False, Default = \"1.20", Scope = Public
 	#tag EndConstant
 
 	#tag Constant, Name = cSupportEmail, Type = String, Dynamic = False, Default = \"", Scope = Public

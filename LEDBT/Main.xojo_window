@@ -10,7 +10,7 @@ Begin DesktopWindow Main
    HasFullScreenButton=   False
    HasMaximizeButton=   False
    HasMinimizeButton=   True
-   Height          =   420
+   Height          =   450
    ImplicitInstance=   True
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -23,7 +23,7 @@ Begin DesktopWindow Main
    Title           =   "Untitled"
    Type            =   0
    Visible         =   True
-   Width           =   880
+   Width           =   900
    Begin DesktopButton bD1All
       AllowAutoDeactivate=   True
       Bold            =   False
@@ -196,7 +196,7 @@ Begin DesktopWindow Main
       Visible         =   True
       Width           =   165
    End
-   Begin DesktopTextField d1Bin
+   Begin DesktopTextField d1Out
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -213,7 +213,7 @@ Begin DesktopWindow Main
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   85
+      Left            =   70
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -221,48 +221,7 @@ Begin DesktopWindow Main
       LockTop         =   True
       MaximumCharactersAllowed=   0
       Password        =   False
-      ReadOnly        =   True
-      Scope           =   0
-      TabIndex        =   9
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Text            =   ""
-      TextAlignment   =   2
-      TextColor       =   &c000000
-      Tooltip         =   ""
-      Top             =   317
-      Transparent     =   False
-      Underline       =   False
-      ValidationMask  =   ""
-      Visible         =   True
-      Width           =   80
-   End
-   Begin DesktopTextField d1Hex
-      AllowAutoDeactivate=   True
-      AllowFocusRing  =   True
-      AllowSpellChecking=   False
-      AllowTabs       =   False
-      BackgroundColor =   &cFFFFFF
-      Bold            =   False
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      Format          =   ""
-      HasBorder       =   True
-      Height          =   22
-      Hint            =   ""
-      Index           =   -2147483648
-      Italic          =   False
-      Left            =   85
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MaximumCharactersAllowed=   0
-      Password        =   False
-      ReadOnly        =   True
+      ReadOnly        =   False
       Scope           =   0
       TabIndex        =   10
       TabPanelIndex   =   0
@@ -276,9 +235,9 @@ Begin DesktopWindow Main
       Underline       =   False
       ValidationMask  =   ""
       Visible         =   True
-      Width           =   80
+      Width           =   90
    End
-   Begin DesktopTextField d2Bin
+   Begin DesktopTextField d2Out
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
@@ -295,7 +254,7 @@ Begin DesktopWindow Main
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   311
+      Left            =   296
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -303,48 +262,7 @@ Begin DesktopWindow Main
       LockTop         =   True
       MaximumCharactersAllowed=   0
       Password        =   False
-      ReadOnly        =   True
-      Scope           =   0
-      TabIndex        =   11
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Text            =   ""
-      TextAlignment   =   2
-      TextColor       =   &c000000
-      Tooltip         =   ""
-      Top             =   317
-      Transparent     =   False
-      Underline       =   False
-      ValidationMask  =   ""
-      Visible         =   True
-      Width           =   130
-   End
-   Begin DesktopTextField d2Hex
-      AllowAutoDeactivate=   True
-      AllowFocusRing  =   True
-      AllowSpellChecking=   False
-      AllowTabs       =   False
-      BackgroundColor =   &cFFFFFF
-      Bold            =   False
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      Format          =   ""
-      HasBorder       =   True
-      Height          =   22
-      Hint            =   ""
-      Index           =   -2147483648
-      Italic          =   False
-      Left            =   311
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MaximumCharactersAllowed=   0
-      Password        =   False
-      ReadOnly        =   True
+      ReadOnly        =   False
       Scope           =   0
       TabIndex        =   12
       TabPanelIndex   =   0
@@ -358,7 +276,7 @@ Begin DesktopWindow Main
       Underline       =   False
       ValidationMask  =   ""
       Visible         =   True
-      Width           =   130
+      Width           =   140
    End
    Begin DesktopButton bD2Import
       AllowAutoDeactivate=   True
@@ -370,10 +288,10 @@ Begin DesktopWindow Main
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   50
+      Height          =   22
       Index           =   -2147483648
       Italic          =   False
-      Left            =   276
+      Left            =   261
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -384,14 +302,14 @@ Begin DesktopWindow Main
       TabIndex        =   15
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Import binary/hex from clipboard"
-      Top             =   317
+      Tooltip         =   "Import bitmask from clipboard"
+      Top             =   345
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   30
    End
-   Begin DesktopButton bD2ExportHex
+   Begin DesktopButton bD2Export
       AllowAutoDeactivate=   True
       Bold            =   False
       Cancel          =   False
@@ -404,7 +322,7 @@ Begin DesktopWindow Main
       Height          =   22
       Index           =   -2147483648
       Italic          =   False
-      Left            =   446
+      Left            =   441
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -415,39 +333,8 @@ Begin DesktopWindow Main
       TabIndex        =   16
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Copy hex to clipboard"
+      Tooltip         =   "Copy bitmask to clipboard"
       Top             =   345
-      Transparent     =   False
-      Underline       =   False
-      Visible         =   True
-      Width           =   30
-   End
-   Begin DesktopButton bD2ExportBin
-      AllowAutoDeactivate=   True
-      Bold            =   False
-      Cancel          =   False
-      Caption         =   ">"
-      Default         =   True
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      Height          =   22
-      Index           =   -2147483648
-      Italic          =   False
-      Left            =   446
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MacButtonStyle  =   0
-      Scope           =   0
-      TabIndex        =   17
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Tooltip         =   "Copy binary to clipboard"
-      Top             =   317
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -463,10 +350,10 @@ Begin DesktopWindow Main
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   50
+      Height          =   22
       Index           =   -2147483648
       Italic          =   False
-      Left            =   50
+      Left            =   35
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -477,14 +364,14 @@ Begin DesktopWindow Main
       TabIndex        =   18
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Import binary/hex from clipboard"
-      Top             =   317
+      Tooltip         =   "Import bitmask from clipboard"
+      Top             =   345
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   30
    End
-   Begin DesktopButton bD1ExportHex
+   Begin DesktopButton bD1Export
       AllowAutoDeactivate=   True
       Bold            =   False
       Cancel          =   False
@@ -497,7 +384,7 @@ Begin DesktopWindow Main
       Height          =   22
       Index           =   -2147483648
       Italic          =   False
-      Left            =   170
+      Left            =   165
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -508,39 +395,8 @@ Begin DesktopWindow Main
       TabIndex        =   19
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Copy hex to clipboard"
+      Tooltip         =   "Copy bitmask to clipboard"
       Top             =   345
-      Transparent     =   False
-      Underline       =   False
-      Visible         =   True
-      Width           =   30
-   End
-   Begin DesktopButton bD1ExportBin
-      AllowAutoDeactivate=   True
-      Bold            =   False
-      Cancel          =   False
-      Caption         =   ">"
-      Default         =   True
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      Height          =   22
-      Index           =   -2147483648
-      Italic          =   False
-      Left            =   170
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MacButtonStyle  =   0
-      Scope           =   0
-      TabIndex        =   20
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Tooltip         =   "Copy binary to clipboard"
-      Top             =   317
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -565,10 +421,10 @@ Begin DesktopWindow Main
       TabIndex        =   21
       TabPanelIndex   =   0
       Tooltip         =   ""
-      Top             =   394
+      Top             =   424
       Transparent     =   True
       Visible         =   True
-      Width           =   878
+      Width           =   898
       Begin DesktopLabel lProgInfo
          AllowAutoDeactivate=   True
          Bold            =   False
@@ -580,7 +436,7 @@ Begin DesktopWindow Main
          Index           =   -2147483648
          InitialParent   =   "rStatus"
          Italic          =   False
-         Left            =   624
+         Left            =   735
          LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   False
@@ -596,11 +452,11 @@ Begin DesktopWindow Main
          TextAlignment   =   3
          TextColor       =   &c000000
          Tooltip         =   "Click to see program information."
-         Top             =   397
+         Top             =   427
          Transparent     =   True
          Underline       =   False
          Visible         =   True
-         Width           =   248
+         Width           =   157
       End
       Begin DesktopLabel lStatus
          AllowAutoDeactivate=   True
@@ -627,9 +483,9 @@ Begin DesktopWindow Main
          TabStop         =   True
          Text            =   "Untitled"
          TextAlignment   =   0
-         TextColor       =   &c000000
+         TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   397
+         Top             =   427
          Transparent     =   True
          Underline       =   False
          Visible         =   True
@@ -649,7 +505,7 @@ Begin DesktopWindow Main
       Height          =   30
       Index           =   -2147483648
       Italic          =   False
-      Left            =   810
+      Left            =   815
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -680,7 +536,7 @@ Begin DesktopWindow Main
       Height          =   30
       Index           =   -2147483648
       Italic          =   False
-      Left            =   810
+      Left            =   815
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -707,7 +563,7 @@ Begin DesktopWindow Main
       FillColor       =   &cFFFFFF
       Height          =   258
       Index           =   -2147483648
-      Left            =   540
+      Left            =   545
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -722,10 +578,11 @@ Begin DesktopWindow Main
       Visible         =   True
       Width           =   258
    End
-   Begin DesktopTextField mtHex
+   Begin DesktopTextArea mtOUt
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
       AllowSpellChecking=   False
+      AllowStyledText =   True
       AllowTabs       =   False
       BackgroundColor =   &cFFFFFF
       Bold            =   False
@@ -735,19 +592,23 @@ Begin DesktopWindow Main
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   22
-      Hint            =   ""
+      HasHorizontalScrollbar=   False
+      HasVerticalScrollbar=   False
+      Height          =   38
+      HideSelection   =   True
       Index           =   -2147483648
       Italic          =   False
-      Left            =   540
+      Left            =   537
+      LineHeight      =   0.0
+      LineSpacing     =   1.0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
       MaximumCharactersAllowed=   0
-      Password        =   False
-      ReadOnly        =   True
+      Multiline       =   True
+      ReadOnly        =   False
       Scope           =   0
       TabIndex        =   25
       TabPanelIndex   =   0
@@ -759,11 +620,12 @@ Begin DesktopWindow Main
       Top             =   345
       Transparent     =   False
       Underline       =   False
+      UnicodeMode     =   0
       ValidationMask  =   ""
       Visible         =   True
-      Width           =   275
+      Width           =   300
    End
-   Begin DesktopButton bMtExportHex
+   Begin DesktopButton bMtExport
       AllowAutoDeactivate=   True
       Bold            =   False
       Cancel          =   False
@@ -776,7 +638,7 @@ Begin DesktopWindow Main
       Height          =   22
       Index           =   -2147483648
       Italic          =   False
-      Left            =   820
+      Left            =   842
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -787,7 +649,7 @@ Begin DesktopWindow Main
       TabIndex        =   26
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Copy hex to clipboard"
+      Tooltip         =   "Copy bitmask to clipboard"
       Top             =   345
       Transparent     =   False
       Underline       =   False
@@ -807,7 +669,7 @@ Begin DesktopWindow Main
       Height          =   22
       Index           =   -2147483648
       Italic          =   False
-      Left            =   505
+      Left            =   502
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -818,12 +680,260 @@ Begin DesktopWindow Main
       TabIndex        =   27
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Import hex from clipboard"
+      Tooltip         =   "Import bitmask from clipboard"
       Top             =   345
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   30
+   End
+   Begin DesktopButton bMtShftD
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Cancel          =   False
+      Caption         =   "↓"
+      Default         =   True
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   815
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MacButtonStyle  =   0
+      Scope           =   0
+      TabIndex        =   28
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Shift down"
+      Top             =   278
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   20
+   End
+   Begin DesktopButton bMtShftU
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Cancel          =   False
+      Caption         =   "↑"
+      Default         =   True
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   815
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MacButtonStyle  =   0
+      Scope           =   0
+      TabIndex        =   29
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Shift up"
+      Top             =   253
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   20
+   End
+   Begin DesktopButton bMtRot
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Cancel          =   False
+      Caption         =   "O"
+      Default         =   True
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   815
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MacButtonStyle  =   0
+      Scope           =   0
+      TabIndex        =   30
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Rotate CW (hold Shift for CCW)"
+      Top             =   310
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   20
+   End
+   Begin DesktopButton bMtShftR
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Cancel          =   False
+      Caption         =   "→"
+      Default         =   True
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   783
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MacButtonStyle  =   0
+      Scope           =   0
+      TabIndex        =   31
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Shift right"
+      Top             =   310
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   20
+   End
+   Begin DesktopButton bMtShftL
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Cancel          =   False
+      Caption         =   "←"
+      Default         =   True
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   758
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MacButtonStyle  =   0
+      Scope           =   0
+      TabIndex        =   32
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Shift left"
+      Top             =   310
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   20
+   End
+   Begin DesktopRadioGroup rgOutput
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   25
+      Horizontal      =   True
+      Index           =   -2147483648
+      InitialValue    =   "Bin\r\nHex\r\nDec"
+      Italic          =   False
+      Left            =   85
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      SelectedIndex   =   0
+      TabIndex        =   33
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Specify display and export format"
+      Top             =   394
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   160
+   End
+   Begin DesktopLabel lOutputRG
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   35
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   34
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Format:"
+      TextAlignment   =   0
+      TextColor       =   &c000000
+      Tooltip         =   "Display and export format"
+      Top             =   396
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   50
+   End
+   Begin DesktopButton bMtInvert
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Cancel          =   False
+      Caption         =   "I"
+      Default         =   True
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   30
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   815
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MacButtonStyle  =   0
+      Scope           =   0
+      TabIndex        =   35
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Clear all segments"
+      Top             =   117
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   20
    End
 End
 #tag EndDesktopWindow
@@ -831,15 +941,12 @@ End
 #tag WindowCode
 	#tag Event
 		Function MouseDown(x As Integer, y As Integer) As Boolean
-		  dim xa, ya as integer
+		  dim xa, ya, target, t as integer
 		  
 		  
 		  lStatus.Text = ""
-		  //TextField1.Text = "no"
 		  
-		  //tfx.text = str(xa)
-		  //tfy.text = str(ya)
-		  
+		  // process any clicks on 7-segment numeric
 		  for n as integer = 0 to 7
 		    xa = x-d1xoff(n)
 		    ya = y-d1yoff(n)
@@ -847,17 +954,15 @@ End
 		    if d1(n).contains(xa, ya) then
 		      
 		      if d1bm(n) = 1 then
-		        d1(n).FillColor = app.cDefault
 		        d1bm(n) = 0
+		        
 		      else
-		        d1(n).FillColor = app.cSelected
 		        d1bm(n) = 1
 		      end
-		      
-		      //TextField1.Text = "YES [" + str(n) + "] !!!!"
 		    end
 		  next
 		  
+		  // process any clicks on 14-segment alphanumeric
 		  for n as integer = 0 to 14
 		    xa = x-d2xoff(n)
 		    ya = y-d2yoff(n)
@@ -865,17 +970,15 @@ End
 		    if d2(n).contains(xa, ya) then
 		      
 		      if d2bm(n) = 1 then
-		        d2(n).FillColor = app.cDefault
 		        d2bm(n) = 0
+		        
 		      else
-		        d2(n).FillColor = app.cSelected
 		        d2bm(n) = 1
 		      end
-		      
-		      //TextField1.Text = "YES [" + str(n) + "] !!!!"
 		    end
 		  next
 		  
+		  // process any clicks on 8x8 matrix
 		  for c as integer = 0 to 7
 		    for n as integer = 0 to 7
 		      xa = x-mtxoff(c,n)
@@ -883,21 +986,30 @@ End
 		      
 		      if mt(c,n).contains(xa, ya) then
 		        
-		        if mtbm(c,n) = 1 then
-		          mt(c,n).FillColor = app.cDefault
-		          mtbm(c,n) = 0
+		        if mtbm(c,n) = 1 then  // determine target action: fill/clear
+		          target = 0
 		        else
-		          mt(c,n).FillColor = app.cSelected
-		          mtbm(c,n) = 1
+		          target = 1
 		        end
 		        
-		        //TextField1.Text = "YES [" + str(c) + "," + str(n) + "] !!!!"
+		        if Keyboard.AsyncShiftKey then  // if shift, apply target to entire row
+		          for t = 0 to 7
+		            mtbm(t,n) = target
+		          next
+		        elseif Keyboard.AsyncControlKey then // if ctrl, apply target to entire column
+		          for t = 0 to 7
+		            mtbm(c, t) = target
+		          next
+		        else // otherwise update single segment
+		          mtbm(c,n) = target
+		        end
 		      end
 		    next
 		  next
 		  
-		  CalculateMasks()
-		  Main.Refresh
+		  UpdateFills(fALL)
+		  CalculateMasks(fALL)
+		  Main.Refresh()
 		  
 		End Function
 	#tag EndEvent
@@ -913,7 +1025,8 @@ End
 		  lProgInfo.Text = "Version " + app.cProgVersion + " (" + app.cProgRelDate + ")"
 		  lStatus.Text = "WELCOME!  Click on LED segments to toggle on or off."
 		  
-		  //============================================================
+		  
+		  // setup 7-segment numeric 
 		  d1xo = 50
 		  d1yo = 50
 		  
@@ -921,7 +1034,6 @@ End
 		    d1bm(n) = 0
 		    d1(n) = new RoundRectShape
 		  next
-		  
 		  
 		  d1(0).Rotation = 3.141526/2
 		  d1(0).Width = 14
@@ -968,7 +1080,7 @@ End
 		  d1yoff(7) = d1yo+240
 		  
 		  
-		  //============================================================
+		  // setup 14-segment alphanumeric 
 		  d2xo = 300
 		  d2yo = 50
 		  
@@ -976,7 +1088,6 @@ End
 		    d2bm(n) = 0
 		    d2(n) = new RoundRectShape
 		  next
-		  
 		  
 		  app.CloneInto(d1(0), d2(0))
 		  d2xoff(0) = d2xo+60
@@ -1053,9 +1164,7 @@ End
 		  d2yoff(14) = d2yo+240
 		  
 		  
-		  
-		  //============================================================
-		  
+		  // setup 8x8 matrix
 		  mxo = 550
 		  myo = 50
 		  msp = 34
@@ -1077,13 +1186,14 @@ End
 		  
 		  //============================================================
 		  
-		  CalculateMasks()
+		  CalculateMasks(fALL)
 		End Sub
 	#tag EndEvent
 
 	#tag Event
 		Sub Paint(g As Graphics, areas() As Rect)
-		  dim c,n as integer
+		  dim x,y,n as integer
+		  
 		  
 		  for n = 0 to 7
 		    g.DrawObject(d1(n), d1xoff(n), d1yoff(n))
@@ -1093,9 +1203,9 @@ End
 		    g.DrawObject(d2(n), d2xoff(n), d2yoff(n))
 		  next
 		  
-		  for c = 0 to 7
-		    for n = 0 to 7
-		      g.DrawObject(mt(c,n), mtxoff(c,n), mtyoff(c,n))
+		  for x = 0 to 7
+		    for y = 0 to 7
+		      g.DrawObject(mt(x,y), mtxoff(x,y), mtyoff(x,y))
 		    next
 		  next
 		  
@@ -1106,55 +1216,263 @@ End
 
 
 	#tag Method, Flags = &h0
-		Sub CalculateMasks()
-		  dim c, n, b1, b2, bm as integer
-		  
-		  b1 = 0
-		  for n = 0 to 7
-		    
-		    if d1bm(n) = 1 then
-		      b1 = b1 + Pow(2, n)
-		    end
-		  next
-		  d1Bin.Text = "0b" + app.Bin8(b1)
-		  d1Hex.Text = "0x" + app.Hex8(b1)
-		  //d1Dec.Text = Str(b1)
+		Sub CalculateMasks(flag As Integer)
+		  dim x, y, n, bm As Integer
 		  
 		  
-		  b1 = 0
-		  for n = 0 to 7
-		    
-		    if d2bm(n) = 1 then
-		      b1 = b1 + Pow(2, n)
-		    end
-		  next
-		  
-		  b2 = 0
-		  for n = 8 to 14
-		    
-		    if d2bm(n) = 1 then
-		      b2 = b2 + Pow(2, n-8)
-		    end
-		  next
-		  d2Bin.Text = "0b" + app.Bin8(b2) + app.Bin8(b1)
-		  d2Hex.Text = "0x" + app.Hex8(b2) + app.Hex8(b1)
-		  //d2Dec.Text = Str(mv)
-		  
-		  
-		  mtHex.Text = ""
-		  for c = 0 to 7
+		  // calculate mask for 7-segment numeric
+		  if flag = fALL or flag = fD1 then
 		    bm = 0
 		    for n = 0 to 7
-		      if mtbm(c,n) = 1 then
+		      if d1bm(n) = 1 then
 		        bm = bm + Pow(2, n)
 		      end
 		    next
-		    if (c > 0) then
-		      mtHex.Text = mtHex.Text + ", "
+		    
+		    // construct output based on selected output type
+		    if rgOutput.selectedindex = mHEX then
+		      d1Out.Text = "0x" + bm.ToHex(2)
+		    elseif rgOutput.selectedindex = mBIN then
+		      d1Out.Text = "0b" + bm.ToBinary(8)
+		    else // mDEC
+		      d1Out.Text = bm.ToString
 		    end
-		    mtHex.Text = mtHex.Text + "0x" + app.Hex8(bm)
+		  end
+		  
+		  
+		  // calculate mask for 14-segment alphanumeric
+		  if flag = fALL or flag = fD2 then
+		    bm = 0
+		    for n = 0 to 14
+		      if d2bm(n) = 1 then
+		        bm = bm + Pow(2, n)
+		      end
+		    next
+		    
+		    // construct output based on selected output type
+		    if rgOutput.selectedindex = mHEX then
+		      d2Out.Text = "0x" + bm.ToHex(4)
+		    elseif rgOutput.selectedindex = mBIN then
+		      d2Out.Text = "0b" + bm.ToBinary(16)
+		    else  // mDEC
+		      d2Out.Text = bm.ToString
+		    end
+		  end
+		  
+		  
+		  // calculate mask for 8x8 matrix
+		  if flag = fALL or flag = fMT then
+		    mtOut.Text = ""
+		    for y = 0 to 7
+		      
+		      bm = 0
+		      for x = 7 to 0 step -1
+		        if mtbm(x, y) = 1 then
+		          bm = bm + Pow(2, 7-x)
+		        end
+		      next
+		      
+		      if y > 0 then
+		        mtOut.Text = mtOut.Text + ", "
+		      end
+		      
+		      if rgOutput.selectedindex = mHEX then
+		        mtOut.Text = mtOut.Text + "0x" + bm.ToHex(2)
+		      elseif rgOutput.selectedindex = mBIN then
+		        mtOut.Text = mtOut.Text + "0b" + bm.ToBinary(8)
+		      else  // mDEC
+		        mtOut.Text = mtOut.Text + bm.ToString
+		      end
+		    next
+		  end
+		  
+		  
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function CleanInputString(ts As String) As String
+		  
+		  ts = ts.replaceall("0x", "h")  // convert 0x & h to &h
+		  ts = ts.replaceall("h", "&h")
+		  ts = ts.replaceall("0b", "b")  // convert 0b & b to &b
+		  ts = ts.replaceall("b", "&b")
+		  
+		  ts = ts.replaceall(" ", "")    // remove space
+		  ts = ts.ReplaceLineEndings(EndOfLine.Windows)   // remove line endings
+		  
+		  Return ts
+		  
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub ExportBitmask(bm As String)
+		  
+		  Var c As Clipboard
+		  c = New Clipboard
+		  c.Text = bm
+		  c.Close
+		  
+		  lStatus.Text = "Bitmask copied to clipboard."
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Function GetClipboard() As String
+		  dim ts as string
+		  var c As Clipboard
+		  
+		  
+		  lStatus.Text = ""
+		  
+		  // get text from clipboard
+		  c = New Clipboard
+		  If c.TextAvailable Then
+		    ts = c.Text.Trim()
+		  End If
+		  c.Close
+		  
+		  Return ts
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub ImportD1(ts As String)
+		  dim nm as Integer
+		  
+		  
+		  ts = CleanInputString(ts)
+		  nm = ts.Val()
+		  
+		  for n as Integer = 7 to 0 step -1
+		    
+		    if (nm - pow(2, n)) >= 0 then
+		      d1bm(n) = 1
+		      nm = nm - pow(2, n)
+		      
+		    else
+		      d1bm(n) = 0
+		      
+		    end
 		  next
 		  
+		  
+		  UpdateFills(fD1)
+		  CalculateMasks(fD1)
+		  Main.Refresh()
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub ImportD2(ts As String)
+		  dim nm as Integer
+		  
+		  
+		  ts = CleanInputString(ts)
+		  nm = ts.Val()
+		  
+		  for n as Integer = 14 to 0 step -1
+		    
+		    if (nm - pow(2, n)) >= 0 then
+		      d2bm(n) = 1
+		      nm = nm - pow(2, n)
+		      
+		    else
+		      d2bm(n) = 0
+		      
+		    end
+		  next
+		  
+		  
+		  UpdateFills(fD2)
+		  CalculateMasks(fD2)
+		  Main.Refresh()
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub ImportMT(ts As String)
+		  dim tsa(8) as string
+		  dim nm, x, y as Integer
+		  
+		  
+		  lStatus.Text = ""
+		  
+		  if ts.CountFields(",") <> 8 then
+		    
+		    lStatus.Text = "ERROR - expecting an array of 8 values (separated by commas)"
+		    Return
+		  end
+		  
+		  ts = CleanInputString(ts)
+		  tsa = ts.Split(",")   // split into separate values
+		  
+		  for y = 0 to 7
+		    nm = tsa(y).Val()
+		    
+		    for x = 0 to 7
+		      
+		      if (nm - pow(2, 7-x)) >= 0 then
+		        mtbm(x, y) = 1
+		        nm = nm - pow(2, 7-x)
+		      else
+		        mtbm(x, y) = 0
+		      end
+		    next
+		  next
+		  
+		  
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
+		  Main.Refresh()
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub UpdateFills(flag As integer)
+		  
+		  // update 7-segment numeric segments
+		  if flag = fALL or flag = fD1 then
+		    for n as integer = 0 to 7
+		      
+		      if d1bm(n) = 1 then
+		        d1(n).FillColor = app.cSelected
+		      else
+		        d1(n).FillColor = app.cDefault
+		      end
+		      
+		    next
+		  end
+		  
+		  
+		  // update 14-segment alphanumeric segments
+		  if flag = fALL or flag = fD2 then
+		    for n as integer = 0 to 14
+		      
+		      if d2bm(n) = 1 then
+		        d2(n).FillColor = app.cSelected
+		      else
+		        d2(n).FillColor = app.cDefault
+		      end
+		    next
+		  end
+		  
+		  
+		  // update 8x8 matrix segments (dots)
+		  if flag = fALL or flag = fMT then
+		    for x as integer = 0 to 7
+		      for y as integer = 0 to 7
+		        
+		        if mtbm(x,y) = 1 then
+		          mt(x,y).FillColor = app.cSelected
+		        else
+		          mt(x,y).FillColor = app.cDefault
+		        end
+		      next
+		    next
+		  end
 		  
 		End Sub
 	#tag EndMethod
@@ -1237,6 +1555,28 @@ End
 	#tag EndProperty
 
 
+	#tag Constant, Name = fALL, Type = Double, Dynamic = False, Default = \"0", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = fD1, Type = Double, Dynamic = False, Default = \"1", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = fD2, Type = Double, Dynamic = False, Default = \"2", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = fMT, Type = Double, Dynamic = False, Default = \"3", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = mBIN, Type = Double, Dynamic = False, Default = \"0", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = mDEC, Type = Double, Dynamic = False, Default = \"2", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = mHEX, Type = Double, Dynamic = False, Default = \"1", Scope = Public
+	#tag EndConstant
+
+
 #tag EndWindowCode
 
 #tag Events bD1All
@@ -1245,13 +1585,14 @@ End
 		  
 		  lStatus.Text = ""
 		  
+		  // fill all 7-segment numeric segments
 		  for n as integer = 0 to 7
-		    d1(n).FillColor = app.cSelected
 		    d1bm(n) = 1
 		  next
 		  
-		  CalculateMasks()
-		  Main.Refresh
+		  UpdateFills(fD1)
+		  CalculateMasks(fD1)
+		  Main.Refresh()
 		  
 		End Sub
 	#tag EndEvent
@@ -1262,13 +1603,14 @@ End
 		  
 		  lStatus.Text = ""
 		  
+		  // clear all 7-segment numeric segments
 		  for n as integer = 0 to 7
-		    d1(n).FillColor = app.cDefault
 		    d1bm(n) = 0
 		  next
 		  
-		  CalculateMasks()
-		  Main.Refresh
+		  UpdateFills(fD1)
+		  CalculateMasks(fD1)
+		  Main.Refresh()
 		  
 		End Sub
 	#tag EndEvent
@@ -1279,13 +1621,14 @@ End
 		  
 		  lStatus.Text = ""
 		  
+		  // fill all 14-segment alphanumeric segments
 		  for n as integer = 0 to 14
-		    d2(n).FillColor = app.cSelected
 		    d2bm(n) = 1
 		  next
 		  
-		  CalculateMasks()
-		  Main.Refresh
+		  UpdateFills(fD2)
+		  CalculateMasks(fD2)
+		  Main.Refresh()
 		  
 		End Sub
 	#tag EndEvent
@@ -1296,91 +1639,80 @@ End
 		  
 		  lStatus.Text = ""
 		  
+		  // clear all 14-segment alphanumeric segments
 		  for n as integer = 0 to 14
-		    d2(n).FillColor = app.cDefault
 		    d2bm(n) = 0
 		  next
 		  
-		  CalculateMasks()
-		  Main.Refresh
+		  UpdateFills(fD2)
+		  CalculateMasks(fD2)
+		  Main.Refresh()
 		  
 		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events d1Out
+	#tag Event
+		Function KeyDown(key As String) As Boolean
+		  
+		  
+		  select case key.Left(1).Asc
+		  case 10, 13, 3
+		    // EOL
+		    
+		    ImportD1(d1Out.Text)
+		    
+		    lStatus.Text = ""
+		    
+		    Return True
+		  end
+		  
+		  
+		End Function
+	#tag EndEvent
+#tag EndEvents
+#tag Events d2Out
+	#tag Event
+		Function KeyDown(key As String) As Boolean
+		  
+		  
+		  select case key.Left(1).Asc
+		  case 10, 13, 3
+		    // EOL
+		    
+		    ImportD2(d2Out.Text)
+		    
+		    lStatus.Text = ""
+		    
+		    Return True
+		  end
+		  
+		  
+		End Function
 	#tag EndEvent
 #tag EndEvents
 #tag Events bD2Import
 	#tag Event
 		Sub Pressed()
 		  dim ts as string
-		  dim nm as Integer
 		  var c As Clipboard
+		  
 		  
 		  lStatus.Text = ""
 		  
-		  // get text from clipboard
-		  c = New Clipboard
-		  If c.TextAvailable Then
-		    ts = c.Text
-		  End If
-		  c.Close
+		  ts = GetClipboard()
 		  
-		  if ts.IndexOf("0x") = 0 then
-		    ts = "&h" + ts.NthField("x", 2)
-		    
-		  elseif ts.IndexOf("0b") = 0 then
-		    ts = "&b" + ts.NthField("b", 2)
-		    
-		  else
-		    //MessageBox("INVALID")
-		    lStatus.Text = "ERROR - invalid format found on clipboard, please try again."
-		    
-		    Return
-		  end
+		  ImportD2(ts)
 		  
-		  nm = ts.Val()
-		  
-		  for n as Integer = 14 to 0 step -1
-		    
-		    if (nm - pow(2, n)) >= 0 then
-		      d2bm(n) = 1
-		      d2(n).FillColor = app.cSelected
-		      
-		      nm = nm - pow(2, n)
-		      
-		    else
-		      d2bm(n) = 0
-		      d2(n).FillColor = app.cDefault
-		      
-		    end
-		  next
-		  
-		  lStatus.Text = "Binary/hex successfully imported from clipboard."
-		  
-		  CalculateMasks()
-		  Main.Refresh()
+		  lStatus.Text = "Bitmask successfully imported from clipboard."
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events bD2ExportHex
+#tag Events bD2Export
 	#tag Event
 		Sub Pressed()
-		  Var c As Clipboard
-		  c = New Clipboard
-		  c.Text = d2Hex.text
-		  c.Close
 		  
-		  lStatus.Text = "Hex copied to clipboard."
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events bD2ExportBin
-	#tag Event
-		Sub Pressed()
-		  Var c As Clipboard
-		  c = New Clipboard
-		  c.Text = d2Bin.text
-		  c.Close
-		  
-		  lStatus.Text = "Binary copied to clipboard."
+		  ExportBitmask(d2Out.text)
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -1388,86 +1720,46 @@ End
 	#tag Event
 		Sub Pressed()
 		  dim ts as string
-		  dim nm as Integer
 		  var c As Clipboard
 		  
 		  
 		  lStatus.Text = ""
 		  
-		  // get text from clipboard
-		  c = New Clipboard
-		  If c.TextAvailable Then
-		    ts = c.Text
-		  End If
-		  c.Close
+		  ts = GetClipboard()
 		  
-		  if ts.IndexOf("0x") = 0 then
-		    ts = "&h" + ts.NthField("x", 2)
-		    
-		  elseif ts.IndexOf("0b") = 0 then
-		    ts = "&b" + ts.NthField("b", 2)
-		    
-		  else
-		    //MessageBox("INVALID")
-		    lStatus.Text = "ERROR - invalid format found on clipboard, please try again."
-		    
-		    Return
-		  end
+		  ImportD1(ts)
 		  
-		  nm = ts.Val()
-		  
-		  for n as Integer = 7 to 0 step -1
-		    
-		    if (nm - pow(2, n)) >= 0 then
-		      d1bm(n) = 1
-		      d1(n).FillColor = app.cSelected
-		      
-		      nm = nm - pow(2, n)
-		      
-		    else
-		      d1bm(n) = 0
-		      d1(n).FillColor = app.cDefault
-		      
-		    end
-		  next
-		  
-		  lStatus.Text = "Binary/hex successfully imported from clipboard."
-		  
-		  CalculateMasks()
-		  Main.Refresh()
+		  lStatus.Text = "Bitmask successfully imported from clipboard."
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events bD1ExportHex
+#tag Events bD1Export
 	#tag Event
 		Sub Pressed()
-		  Var c As Clipboard
-		  c = New Clipboard
-		  c.Text = d1Hex.text
-		  c.Close
 		  
-		  lStatus.Text = "Hex copied to clipboard."
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events bD1ExportBin
-	#tag Event
-		Sub Pressed()
-		  Var c As Clipboard
-		  c = New Clipboard
-		  c.Text = d1Bin.text
-		  c.Close
-		  
-		  lStatus.Text = "Binary copied to clipboard."
+		  ExportBitmask(d1Out.text)
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events lProgInfo
 	#tag Event
 		Function MouseDown(x As Integer, y As Integer) As Boolean
-		  //System.GotoURL("https://www.dfgtec.com")
+		  
+		  //display about window
 		  wAbout.Show()
 		End Function
+	#tag EndEvent
+	#tag Event
+		Sub MouseEnter()
+		  
+		  MouseCursor=System.Cursors.FingerPointer
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub MouseExit()
+		  
+		  MouseCursor=System.Cursors.StandardPointer
+		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events bMtAll
@@ -1476,14 +1768,15 @@ End
 		  
 		  lStatus.Text = ""
 		  
-		  for c as integer = 0 to 7
-		    for n as integer = 0 to 7
-		      mt(c,n).FillColor = app.cSelected
-		      mtbm(c,n) = 1
+		  // fill all 8x8 matrix segments
+		  for x as integer = 0 to 7
+		    for y as integer = 0 to 7
+		      mtbm(x,y) = 1
 		    next
 		  next
 		  
-		  CalculateMasks()
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
 		  Main.Refresh
 		  
 		End Sub
@@ -1495,82 +1788,245 @@ End
 		  
 		  lStatus.Text = ""
 		  
-		  for c as integer = 0 to 7
-		    for n as integer = 0 to 7
-		      mt(c,n).FillColor = app.cDefault
-		      mtbm(c,n) = 0
+		  // clear all 8x8 matrix segments
+		  for x as integer = 0 to 7
+		    for y as integer = 0 to 7
+		      mtbm(x,y) = 0
 		    next
 		  next
 		  
-		  CalculateMasks()
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
 		  Main.Refresh
 		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events bMtExportHex
+#tag Events mtOUt
+	#tag Event
+		Function KeyDown(key As String) As Boolean
+		  
+		  
+		  select case key.Left(1).Asc
+		  case 10, 13, 3
+		    // EOL
+		    
+		    ImportMT(mtOut.Text)
+		    
+		    Return True
+		  end
+		  
+		  
+		End Function
+	#tag EndEvent
+#tag EndEvents
+#tag Events bMtExport
 	#tag Event
 		Sub Pressed()
-		  Var c As Clipboard
-		  c = New Clipboard
-		  c.Text = mtHex.text
-		  c.Close
 		  
-		  lStatus.Text = "Hex copied to clipboard."
+		  ExportBitmask(mtOut.text)
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events bMtImport
 	#tag Event
 		Sub Pressed()
-		  dim ts, tsa(8) as string
-		  dim nm as Integer
-		  var cb As Clipboard
+		  dim ts as string
+		  var c As Clipboard
 		  
 		  
 		  lStatus.Text = ""
 		  
-		  // get text from clipboard
-		  cb = New Clipboard
-		  If cb.TextAvailable Then
-		    ts = cb.Text.trim()
-		  End If
-		  cb.Close
+		  ts = GetClipboard()
 		  
-		  if ts.IndexOf("0x") = 0 and ts.CountFields(",") = 8 then
-		    ts = ts.replaceall("0x", "&h")
-		    tsa = ts.Split(",")
-		    
-		  else
-		    //MessageBox("INVALID")
-		    lStatus.Text = "ERROR - invalid format found on clipboard, please try again."
-		    
-		    Return
-		  end
+		  ImportMT(ts)
 		  
-		  for c as Integer = 0 to 7
-		    nm = tsa(c).Val()
+		  lStatus.Text = "Bitmask successfully imported from clipboard."
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events bMtShftD
+	#tag Event
+		Sub Pressed()
+		  dim x, y As Integer
+		  
+		  lStatus.Text = ""
+		  
+		  // shift 8x8 matrix down
+		  for y = 7 to 0 step -1
 		    
-		    for n as Integer = 7 to 0 step -1
+		    if y = 0 then
+		      for x = 0 to 7
+		        mtbm(x,y) = 0
+		      next
+		    else
+		      for x = 0 to 7
+		        mtbm(x,y) = mtbm(x,y-1)
+		      next
+		    end
+		  next
+		  
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
+		  Main.Refresh
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events bMtShftU
+	#tag Event
+		Sub Pressed()
+		  dim x,y As Integer
+		  
+		  lStatus.Text = ""
+		  
+		  // shift 8x8 matrix up
+		  for y = 0 to 7
+		    
+		    if y = 7 then
+		      for x = 0 to 7
+		        mtbm(x,y) = 0
+		      next
+		    else
+		      for x = 0 to 7
+		        mtbm(x,y) = mtbm(x,y+1)
+		      next
+		    end
+		  next
+		  
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
+		  Main.Refresh
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events bMtRot
+	#tag Event
+		Sub Pressed()
+		  dim mtbm_c(8,8), x, y as integer
+		  
+		  // rotate matrix
+		  // using c# solution (Nick) from:
+		  // https://stackoverflow.com/questions/42519/how-do-you-rotate-a-two-dimensional-array
+		  
+		  
+		  lStatus.Text = ""
+		  
+		  // make copy of matrix to rotate
+		  for x = 0 to 7
+		    for y = 0 to 7
+		      mtbm_c(x,y) = mtbm(x,y)
+		    next
+		  next
+		  
+		  // rotate matrix
+		  for x = 0 to 7
+		    for y = 0 to 7
 		      
-		      if (nm - pow(2, n)) >= 0 then
-		        mtbm(c,n) = 1
-		        mt(c,n).FillColor = app.cSelected
-		        
-		        nm = nm - pow(2, n)
-		        
+		      if Keyboard.AsyncShiftKey then
+		        mtbm(x,y) = mtbm_c(8-y-1, x)  // CCW
 		      else
-		        mtbm(c,n) = 0
-		        mt(c,n).FillColor = app.cDefault
-		        
+		        mtbm(x,y) = mtbm_c(y, 8-x-1)  // CW
+		      end
+		      
+		    next
+		  next
+		  
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
+		  Main.Refresh
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events bMtShftR
+	#tag Event
+		Sub Pressed()
+		  dim x, y As Integer
+		  
+		  lStatus.Text = ""
+		  
+		  // shift 8x8 matrix right
+		  for x = 7 to 0 step -1
+		    
+		    if x = 0 then
+		      for y = 0 to 7
+		        mtbm(x,y) = 0
+		      next
+		    else
+		      for y = 0 to 7
+		        mtbm(x,y) = mtbm(x-1,y)
+		      next
+		    end
+		  next
+		  
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
+		  Main.Refresh
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events bMtShftL
+	#tag Event
+		Sub Pressed()
+		  dim x, y As Integer
+		  
+		  lStatus.Text = ""
+		  
+		  // shift 8x8 matrix left
+		  for x = 0 to 7
+		    
+		    if x = 7 then
+		      for y = 0 to 7
+		        mtbm(x,y) = 0
+		      next
+		    else
+		      for y = 0 to 7
+		        mtbm(x,y) = mtbm(x+1,y)
+		      next
+		    end
+		  next
+		  
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
+		  Main.Refresh
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events rgOutput
+	#tag Event
+		Sub SelectionChanged(button As DesktopRadioButton)
+		  
+		  CalculateMasks(fALL)
+		  Main.Refresh()
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events bMtInvert
+	#tag Event
+		Sub Pressed()
+		  
+		  lStatus.Text = ""
+		  
+		  // clear all 8x8 matrix segments
+		  for x as integer = 0 to 7
+		    for y as integer = 0 to 7
+		      if mtbm(x,y) = 1 then
+		        mtbm(x,y) = 0
+		      else
+		        mtbm(x,y) = 1
 		      end
 		    next
 		  next
 		  
-		  lStatus.Text = "Binary/hex successfully imported from clipboard."
+		  UpdateFills(fMT)
+		  CalculateMasks(fMT)
+		  Main.Refresh
 		  
-		  CalculateMasks()
-		  Main.Refresh()
 		End Sub
 	#tag EndEvent
 #tag EndEvents
