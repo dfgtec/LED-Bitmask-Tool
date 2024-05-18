@@ -9,5 +9,5 @@ The three type of displays supported by the tool are:
 - 4-Digit Quad Alphanumeric Display (see Adafruit product #1911)
 - 8x8 LED Matrix Display (see Adafruit product #870)
 
-Visit the [project website](https://dfgtec.com/prg-led-bitmask) for additional information.
+Visit the [project website](https://dfgtec.com/prg-led-bitmask) for additional information and to download installers.
 

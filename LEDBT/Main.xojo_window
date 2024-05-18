@@ -940,6 +940,14 @@ End
 
 #tag WindowCode
 	#tag Event
+		Sub Closing()
+		  
+		  // save bitmasks from this session
+		  CalculateMasks(fEXP)
+		End Sub
+	#tag EndEvent
+
+	#tag Event
 		Function MouseDown(x As Integer, y As Integer) As Boolean
 		  dim xa, ya, target, t as integer
 		  
@@ -1025,6 +1033,14 @@ End
 		  lProgInfo.Text = "Version " + app.cProgVersion + " (" + app.cProgRelDate + ")"
 		  lStatus.Text = "WELCOME!  Click on LED segments to toggle on or off."
 		  
+		  // restore previous setup
+		  dim bmf as Integer  // bitmask format: Bin/Hex/Dec (0/1/2)
+		  bmf = app.cfgDB.getSingleValue("bmFormat", -1)
+		  if bmf >= 0 then
+		    rgOutput.SelectedIndex = bmf
+		  else
+		    rgOutput.SelectedIndex = 0 // default to Bin
+		  end
 		  
 		  // setup 7-segment numeric 
 		  d1xo = 50
@@ -1183,10 +1199,16 @@ End
 		    next
 		  next
 		  
-		  
 		  //============================================================
 		  
-		  CalculateMasks(fALL)
+		  // restore bitmasks from last session
+		  d1Out.Text = app.cfgDB.getStringValue("d1Bitmask", "0")
+		  ImportD1(d1Out.Text)
+		  d2Out.Text = app.cfgDB.getStringValue("d2Bitmask", "0")
+		  ImportD2(d2Out.Text)
+		  mtOut.Text = app.cfgDB.getStringValue("mtBitmask", "0")
+		  ImportMT(mtOut.Text)
+		  
 		End Sub
 	#tag EndEvent
 
@@ -1217,8 +1239,16 @@ End
 
 	#tag Method, Flags = &h0
 		Sub CalculateMasks(flag As Integer)
-		  dim x, y, n, bm As Integer
+		  dim x, y, n, bm, bmfor As Integer
+		  dim exStr as String
 		  
+		  if flag = fEXP then  // special mode to save bitmasks for this session (decimal format)
+		    flag = fALL  // do all
+		    bmfor = mEXP // export to cfg DB
+		    
+		  else  // normal mode
+		    bmfor = rgOutput.selectedindex
+		  end
 		  
 		  // calculate mask for 7-segment numeric
 		  if flag = fALL or flag = fD1 then
@@ -1230,12 +1260,14 @@ End
 		    next
 		    
 		    // construct output based on selected output type
-		    if rgOutput.selectedindex = mHEX then
+		    if bmfor = mHEX then
 		      d1Out.Text = "0x" + bm.ToHex(2)
-		    elseif rgOutput.selectedindex = mBIN then
+		    elseif bmfor = mBIN then
 		      d1Out.Text = "0b" + bm.ToBinary(8)
-		    else // mDEC
+		    elseif bmfor = mDEC then
 		      d1Out.Text = bm.ToString
+		    else // mEXP
+		      app.cfgDB.setStringValue("d1Bitmask", bm.ToString)  // store bitmask
 		    end
 		  end
 		  
@@ -1250,12 +1282,14 @@ End
 		    next
 		    
 		    // construct output based on selected output type
-		    if rgOutput.selectedindex = mHEX then
+		    if bmfor = mHEX then
 		      d2Out.Text = "0x" + bm.ToHex(4)
-		    elseif rgOutput.selectedindex = mBIN then
+		    elseif bmfor = mBIN then
 		      d2Out.Text = "0b" + bm.ToBinary(16)
-		    else  // mDEC
+		    elseif  bmfor = mDEC then
 		      d2Out.Text = bm.ToString
+		    else // mEXP
+		      app.cfgDB.setStringValue("d2Bitmask", bm.ToString)  // store bitmask
 		    end
 		  end
 		  
@@ -1263,6 +1297,8 @@ End
 		  // calculate mask for 8x8 matrix
 		  if flag = fALL or flag = fMT then
 		    mtOut.Text = ""
+		    exStr = ""
+		    
 		    for y = 0 to 7
 		      
 		      bm = 0
@@ -1274,16 +1310,23 @@ End
 		      
 		      if y > 0 then
 		        mtOut.Text = mtOut.Text + ", "
+		        exStr = exStr + ", "
 		      end
 		      
-		      if rgOutput.selectedindex = mHEX then
+		      if bmfor = mHEX then
 		        mtOut.Text = mtOut.Text + "0x" + bm.ToHex(2)
-		      elseif rgOutput.selectedindex = mBIN then
+		      elseif bmfor = mBIN then
 		        mtOut.Text = mtOut.Text + "0b" + bm.ToBinary(8)
-		      else  // mDEC
+		      elseif bmfor = mDEC then
 		        mtOut.Text = mtOut.Text + bm.ToString
+		      else // mEXP
+		        exStr = exStr + bm.ToString
 		      end
 		    next
+		    
+		    if bmfor = mEXP then
+		      app.cfgDB.setStringValue("mtBitmask", exStr)  // store bitmask
+		    end
 		  end
 		  
 		  
@@ -1554,6 +1597,10 @@ End
 		myo As integer
 	#tag EndProperty
 
+	#tag Property, Flags = &h0
+		oPopoverReference As wAbout
+	#tag EndProperty
+
 
 	#tag Constant, Name = fALL, Type = Double, Dynamic = False, Default = \"0", Scope = Public
 	#tag EndConstant
@@ -1564,6 +1611,9 @@ End
 	#tag Constant, Name = fD2, Type = Double, Dynamic = False, Default = \"2", Scope = Public
 	#tag EndConstant
 
+	#tag Constant, Name = fEXP, Type = Double, Dynamic = False, Default = \"8", Scope = Public
+	#tag EndConstant
+
 	#tag Constant, Name = fMT, Type = Double, Dynamic = False, Default = \"3", Scope = Public
 	#tag EndConstant
 
@@ -1571,6 +1621,9 @@ End
 	#tag EndConstant
 
 	#tag Constant, Name = mDEC, Type = Double, Dynamic = False, Default = \"2", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = mEXP, Type = Double, Dynamic = False, Default = \"8", Scope = Public
 	#tag EndConstant
 
 	#tag Constant, Name = mHEX, Type = Double, Dynamic = False, Default = \"1", Scope = Public
@@ -1746,7 +1799,8 @@ End
 		Function MouseDown(x As Integer, y As Integer) As Boolean
 		  
 		  //display about window
-		  wAbout.Show()
+		  oPopoverReference = new wAbout
+		  oPopoverReference.ShowPopover(me, DesktopWindow.DisplaySides.Left)
 		End Function
 	#tag EndEvent
 	#tag Event
@@ -2000,6 +2054,8 @@ End
 #tag Events rgOutput
 	#tag Event
 		Sub SelectionChanged(button As DesktopRadioButton)
+		  
+		  app.cfgDB.setSingleValue("bmFormat", me.SelectedIndex)  // store setup
 		  
 		  CalculateMasks(fALL)
 		  Main.Refresh()

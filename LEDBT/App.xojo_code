@@ -3,6 +3,11 @@ Protected Class App
 Inherits DesktopApplication
 	#tag Event
 		Sub Opening()
+		  
+		  // open configuration (preferences) database
+		  cfgDB = new classPreferences("dfgtec", "LEDBT")
+		  
+		  
 		  if isdarkmode() then
 		    app.cdefault = &c2b2b2b
 		  else
@@ -30,9 +35,28 @@ Inherits DesktopApplication
 		End Sub
 	#tag EndMethod
 
+	#tag Method, Flags = &h0
+		Function getBuiltStr() As String
+		  dim dt as DateTime
+		  dim dts, dtsArray() As String
+		  
+		  
+		  // constructs string with build date and Xojo version
+		  dt = App.BuildDate
+		  dts = dt.ToString()
+		  dtsArray = dts.Split(",")
+		  
+		  Return "Built " + dtsArray(0).Trim() + ", " + dtsArray(1).Trim() + " with Xojo " + XojoVersionString
+		End Function
+	#tag EndMethod
+
 
 	#tag Property, Flags = &h0
 		cDefault As Color = &cffff00
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		cfgDB As classPreferences
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -46,10 +70,10 @@ Inherits DesktopApplication
 	#tag Constant, Name = cProgName, Type = String, Dynamic = False, Default = \"LED Bitmask Tool", Scope = Public
 	#tag EndConstant
 
-	#tag Constant, Name = cProgRelDate, Type = String, Dynamic = False, Default = \"8 May 2024", Scope = Public
+	#tag Constant, Name = cProgRelDate, Type = String, Dynamic = False, Default = \"16 May 2024", Scope = Public
 	#tag EndConstant
 
-	#tag Constant, Name = cProgVersion, Type = String, Dynamic = False, Default = \"1.20", Scope = Public
+	#tag Constant, Name = cProgVersion, Type = String, Dynamic = False, Default = \"1.21", Scope = Public
 	#tag EndConstant
 
 	#tag Constant, Name = cSupportEmail, Type = String, Dynamic = False, Default = \"", Scope = Public
