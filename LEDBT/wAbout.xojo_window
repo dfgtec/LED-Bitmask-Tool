@@ -1,62 +1,29 @@
-#tag Window
-Begin Window wAbout
-   BackColor       =   &cFFFFFF00
+#tag DesktopWindow
+Begin DesktopWindow wAbout
    Backdrop        =   0
-   CloseButton     =   True
+   BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   Frame           =   11
+   DefaultLocation =   0
    FullScreen      =   False
-   HasBackColor    =   False
+   HasBackgroundColor=   False
+   HasCloseButton  =   True
    HasFullScreenButton=   False
-   Height          =   285
+   HasMaximizeButton=   False
+   HasMinimizeButton=   False
+   Height          =   260
    ImplicitInstance=   True
-   LiveResize      =   "False"
    MacProcID       =   0
-   MaxHeight       =   32000
-   MaximizeButton  =   False
-   MaxWidth        =   32000
+   MaximumHeight   =   32000
+   MaximumWidth    =   32000
    MenuBar         =   0
    MenuBarVisible  =   True
-   MinHeight       =   64
-   MinimizeButton  =   False
-   MinWidth        =   64
-   Placement       =   0
+   MinimumHeight   =   64
+   MinimumWidth    =   64
    Resizeable      =   False
    Title           =   "About"
+   Type            =   ""
    Visible         =   True
    Width           =   380
-   Begin PushButton bOK
-      AllowAutoDeactivate=   True
-      Bold            =   False
-      Cancel          =   False
-      Caption         =   "OK"
-      Default         =   False
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      Height          =   22
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Italic          =   False
-      Left            =   150
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MacButtonStyle  =   0
-      Scope           =   0
-      TabIndex        =   0
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   243
-      Transparent     =   True
-      Underline       =   False
-      Visible         =   True
-      Width           =   80
-   End
    Begin Canvas cIcon
       AllowAutoDeactivate=   True
       AllowFocus      =   False
@@ -231,7 +198,7 @@ Begin Window wAbout
       DataSource      =   ""
       Enabled         =   True
       FontName        =   "System"
-      FontSize        =   0.0
+      FontSize        =   13.0
       FontUnit        =   0
       Height          =   20
       Index           =   -2147483648
@@ -295,12 +262,66 @@ Begin Window wAbout
       Visible         =   True
       Width           =   270
    End
+   Begin Label lbBuilt
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   11.0
+      FontUnit        =   0
+      Height          =   20
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   10
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   9
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Untitled"
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   235
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   360
+   End
 End
-#tag EndWindow
+#tag EndDesktopWindow
 
 #tag WindowCode
 	#tag Event
-		Sub Open()
+		Function KeyDown(key As String) As Boolean
+		  
+		  select case ASC( key )
+		    
+		  case 27, 32 // escape or space key
+		    self.close
+		    
+		  end select
+		End Function
+	#tag EndEvent
+
+	#tag Event
+		Function MouseDown(x As Integer, y As Integer) As Boolean
+		  
+		  self.close 
+		End Function
+	#tag EndEvent
+
+	#tag Event
+		Sub Opening()
 		  self.Title = "About " + App.cProgName
 		  
 		  self.AboutSt1.Text = App.cProgName
@@ -308,31 +329,31 @@ End
 		  self.AboutSt3.Text = "Copyright " + chr(169) + " " + App.cProgCopyright
 		  self.AboutSt4.Text = "All rights reserved."
 		  
+		  self.lbBuilt.Text = app.getBuiltStr()
+		  
 		  StaticLink1.Initialize(App.cSupportWebsite, App.cSupportWebsite)
 		  //StaticLink2.Initialize(App.cSupportEmail, "mailto:" + App.cSupportEmail) 
 		  
 		  if isdarkmode() then  // make text lighter
 		    StaticLink1.TextColor = &c8080FF
+		    self.lbBuilt.TextColor = &c888888
 		    //StaticLink2.TextColor = &c8080FF
+		  else
+		    self.lbBuilt.TextColor = &c888888
 		  end
+		  
 		End Sub
 	#tag EndEvent
 
 
 #tag EndWindowCode
 
-#tag Events bOK
-	#tag Event
-		Sub Action()
-		  self.Close
-		End Sub
-	#tag EndEvent
-#tag EndEvents
 #tag Events cIcon
 	#tag Event
 		Sub Paint(g As Graphics, areas() As REALbasic.Rect)
 		  
-		  g.DrawPicture(clipboard_48, 0, 0)
+		  g.DrawPicture(sevensegred48, 0, 0, 48, 48, 0, 0, 48, 48)
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -386,8 +407,7 @@ End
 			"6 - Rounded Window"
 			"7 - Global Floating Window"
 			"8 - Sheet Window"
-			"9 - Metal Window"
-			"11 - Modeless Dialog"
+			"9 - Modeless Dialog"
 		#tag EndEnumValues
 	#tag EndViewProperty
 	#tag ViewProperty
@@ -450,8 +470,8 @@ End
 		Visible=true
 		Group="Background"
 		InitialValue="&hFFFFFF"
-		Type="Color"
-		EditorType="Color"
+		Type="ColorGroup"
+		EditorType="ColorGroup"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Name"
@@ -562,7 +582,7 @@ End
 		Visible=true
 		Group="Appearance"
 		InitialValue=""
-		Type="MenuBar"
+		Type="DesktopMenuBar"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
