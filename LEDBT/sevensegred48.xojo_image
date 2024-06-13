@@ -1,8 +1,9 @@
 #tag MultiImage
 Image sevensegred48
 	#tag ImageRepresentation
-		SaveInfo = APHRcwECAQAAAAAsQzpcVXNlcnNcRnJlZFxEb3dubG9hZHNcSUNPTlNcN3NlZ2ludlI0OC5wbmcDAAAAAAEABAAAAAABAAAAAAAAAA==
-		FullPath = C:\Users\Fred\Downloads\ICONS\7seginvR48.png
+		SaveInfo = APHRcwECAQAAAAA6RDpcREVWXGdpdFxMRUQtQml0bWFzay1Ub29sXExFREJUXHJlc291cmNlc1w3c2VnaW52UjQ4LnBuZwMAAAAAAQAEAAAAAAEAAAAAAAAA
+		FullPath = D:\DEV\git\LED-Bitmask-Tool\LEDBT\resources\7seginvR48.png
+		PartialPath = resources\7seginvR48.png
 		#tag ImageSpecification
 			Comment = 
 			Device = 31

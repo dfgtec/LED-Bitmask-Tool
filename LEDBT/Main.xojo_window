@@ -928,7 +928,7 @@ Begin DesktopWindow Main
       TabIndex        =   35
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Clear all segments"
+      Tooltip         =   "Invert all segments"
       Top             =   117
       Transparent     =   False
       Underline       =   False
@@ -1030,8 +1030,6 @@ End
 		  Main.rStatus.FillColor = Color.FillColor
 		  Main.Title = app.cProgName
 		  
-		  lProgInfo.Text = "Version " + app.cProgVersion + " (" + app.cProgRelDate + ")"
-		  lStatus.Text = "WELCOME!  Click on LED segments to toggle on or off."
 		  
 		  // restore previous setup
 		  dim bmf as Integer  // bitmask format: Bin/Hex/Dec (0/1/2)
@@ -1209,6 +1207,9 @@ End
 		  mtOut.Text = app.cfgDB.getStringValue("mtBitmask", "0")
 		  ImportMT(mtOut.Text)
 		  
+		  // misc setup
+		  lProgInfo.Text = "Version " + app.cProgVersion + " (" + app.cProgRelDate + ")"
+		  lStatus.Text = "WELCOME!  Click on LED segments to toggle on or off."
 		End Sub
 	#tag EndEvent
 

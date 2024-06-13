@@ -70,10 +70,10 @@ Inherits DesktopApplication
 	#tag Constant, Name = cProgName, Type = String, Dynamic = False, Default = \"LED Bitmask Tool", Scope = Public
 	#tag EndConstant
 
-	#tag Constant, Name = cProgRelDate, Type = String, Dynamic = False, Default = \"16 May 2024", Scope = Public
+	#tag Constant, Name = cProgRelDate, Type = String, Dynamic = False, Default = \"12 Jun 2024", Scope = Public
 	#tag EndConstant
 
-	#tag Constant, Name = cProgVersion, Type = String, Dynamic = False, Default = \"1.21", Scope = Public
+	#tag Constant, Name = cProgVersion, Type = String, Dynamic = False, Default = \"1.22", Scope = Public
 	#tag EndConstant
 
 	#tag Constant, Name = cSupportEmail, Type = String, Dynamic = False, Default = \"", Scope = Public
